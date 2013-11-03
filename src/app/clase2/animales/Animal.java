@@ -18,7 +18,7 @@ public abstract void hacerRuido(){
 }
 
 public abstract void comer();
-    /**
+/**
      * @return the nombre
      */
     public String getNombre() {
