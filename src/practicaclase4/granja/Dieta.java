@@ -1,5 +1,5 @@
 
-package practica.granja;
+package practicaclase4.granja;
 
 import java.util.Date;
 
