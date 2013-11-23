@@ -1,20 +1,44 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package clase4.colecciones.hilos;
 
-/**
- *
- * @author alumno
- */
-public class ProcesosHilo extends Thread{
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-    @Override
-    public void run() {
-        
+public class ProcesosHilo extends Thread {
+
+   
+
+    public void listProceso() {
+        try {
+            Process proceso = Runtime.getRuntime().exec("tasklist");
+            BufferedReader stdInput = new BufferedReader(new InputStreamReader(
+                    proceso.getInputStream()));
+            BufferedReader stdError = new BufferedReader(new InputStreamReader(
+                    proceso.getErrorStream()));
+            String s = null;
+            System.out.println("Here is the standard output of the command:\n");
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+            System.out.println("Here is the standard error of the command (if any):\n");
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+            //System.exit(0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
-    
-    
+     @Override
+    public void run() {
+         for (int i = 0; i <10; i++) {
+               listProceso();   
+                try {
+                Thread.sleep(1000l);
+            } catch (InterruptedException ex) {
+                System.out.println("ErRoR : "+ex.getMessage());
+            }
+        }
+    }
 }

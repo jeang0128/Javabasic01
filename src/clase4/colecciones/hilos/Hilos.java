@@ -10,8 +10,10 @@ public class Hilos {
        // Hilos.testHiloHerencia();
         //Hilos.testHiloInterface();
        // Hilos.Simple();
-        Hilos.testSimple2();
-        Hilos.testPrioridad();
+       // Hilos.testSimple2();
+       // Hilos.testPrioridad();
+        Hilos.testProcesos();
+        
     }
     
   /*  public static void testHiloHerencia() {
@@ -38,7 +40,7 @@ public class Hilos {
         
         
     }
-    public static void testPrioridad() {
+    /*public static void testPrioridad() {
         
         Simple2DelayThread delayJose = new Simple2DelayThread("jose",0);
         Simple2DelayThread delayLuis = new Simple2DelayThread("Luis",0);
@@ -48,6 +50,12 @@ public class Hilos {
         
         delayJose.start();
         delayLuis.start();
+    }*/
+    public static void testProcesos() {
+        
+        ProcesosHilo ilo = new ProcesosHilo();
+        ilo.start();
+        
     }
     
 }
