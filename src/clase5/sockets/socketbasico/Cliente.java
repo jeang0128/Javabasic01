@@ -26,6 +26,12 @@ public class Cliente {
             System.out.println(msg);
 // COMUNICACION 2
             out.println("CLIENTE: PePe Rosas");
+            out.println("m");
+            out.println(10);
+            out.println(20);
+            msg = in.readLine();
+            System.out.println(msg);
+            System.out.println(msg);
 // Cerrar canales
             in.close();
             out.close();

@@ -28,6 +28,11 @@ public class Servidor {
 // COMUNICACION 2
             String resp2 = in.readLine();
             System.out.println(resp2);
+            
+            String operacion = in.readLine();
+            Double operador1 = Double.parseDouble(in.readLine());
+            Double operador2 = Double.parseDouble(in.readLine());
+            
             /* Cerramos el canal */
             in.close();
             out.close();
