@@ -21,8 +21,6 @@ public class AbejaHembra extends Abeja{
         this.tiempovida = tiempovida;
     }
     
-    
-    
     private void comer(){
     }
     private void trabajar(){
